@@ -15,12 +15,12 @@
 	?>
 	<style>
             .navbar{
-                                color: white;
-                                background-color: #cacaca;
-            }
+           background-color: #cacaca;
+           //background-color: black;
+               }
   
 	    body {
-                            background-color: whitesmoke;
+                   background-color: whitesmoke;
 		  padding-top: 70px;
 		}
  

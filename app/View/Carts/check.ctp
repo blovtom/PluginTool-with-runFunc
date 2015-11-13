@@ -25,7 +25,7 @@
         echo " There seems to be no potential problems and your minimum recommended wordpress version is $hold ";
     }    
     else{
-                echo 'There are some potential concerns, please click Detailed results for more information.'."<br>";
+                echo 'There are some potential concerns, please click \'Detailed Result\' for more information.'."<br>";
         if ($hDuplicates != null && $hooksDuplicateC == null){
             echo'There are duplicate hook names but this is not a cause for concern because they do not use the same hook call backs.';
         }
@@ -46,9 +46,9 @@
     <h5><b><u>Detailed Result</u></b></h5>
 </div>
 
-<div class = "panel panel-primary">
+<div class = "panel panel-primary result1">
     
-   <div class ='panel  panel-heading'>
+   <div class ='panel  panel-heading '>
        <h5>Duplicate Function Names</h5>
    </div>
 		<table class="table">
@@ -107,7 +107,7 @@
             </tr>
         </tbody>
     </table>
-       <div class ='panel  panel-heading'>
+   <div class ='panel  panel-heading'>
        <h5>Duplicate Filters</h5>
    </div>
         <table class = 'table table-bordered' >
@@ -174,5 +174,3 @@
 	
 
 </div> 
-
-
