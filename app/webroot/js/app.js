@@ -1,6 +1,6 @@
 //script for cart counter
 $(document).ready(function(){
-	$('#add-form').submit(function(e){
+	$('[id^=add-form]').submit(function(e){
 		e.preventDefault();
 		var tis = $(this);
 		$.post(tis.attr('action'),tis.serialize(),function(data){

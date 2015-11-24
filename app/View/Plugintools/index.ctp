@@ -58,9 +58,10 @@
                    </td>
                    <td class="actions">
                 <div class = "btn-group" role = "group" aria-label="...">         
-                   <?php echo $this->Form->create('Cart',array('id'=>'add-form','url'=>array('controller'=>'carts','action'=>'add1')));  ?>
+                   <?php echo $this->Form->create('Cart',array('id'=>'add-form-'.$plugintool['Plugintool']['id'],'url'=>array('controller'=>'carts','action'=>'add1')));  ?>
 		<?php echo $this->Form->hidden('plugintool_id',array('value'=>$plugintool['Plugintool']['id']));?> 
 		<?php echo $this->Form->submit('Add',array('class'=>'btn-info btn btn-sm'));?> 
+		<?php echo $this->Form->end() ?>
 		
                   
                 </div>
