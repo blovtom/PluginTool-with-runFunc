@@ -10,7 +10,7 @@ $(document).ready(function(){
 });
 //script for hiding and showing results
 $( document ).ready(function(){
-    $(".panel-primary ").hide();
+    $(".result1").hide();
             });
 $("#result").click(function(){
     $(".panel-primary").toggle();

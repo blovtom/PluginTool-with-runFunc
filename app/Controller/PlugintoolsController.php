@@ -67,7 +67,7 @@ class PlugintoolsController extends AppController {
        $this->set(compact('names'));
        
        //pass the search parameter to highlight the text
-       $this->set('search', isset($this->params['named']['search']) ? $this->params['named']['search']: "");
+       $this->set('search', isset($this->params['named']['search']) ? $this->params['named']['search']: "");       
     }
 
     public function view($id){

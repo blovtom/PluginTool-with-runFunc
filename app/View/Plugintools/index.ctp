@@ -14,20 +14,9 @@
             echo $this->Form->end();
             ?> 
 </div>
-
-
      
-    
+<?php echo $this->Html->link(__('View Selected'),array('controller'=>'carts','action'=>'view'), array('class' => 'btn btn-sm btn-success view'))?>
 
-     
-
-
-    
-
-<div>
-<?php echo $this->Html->link(__('View Selected'),array('controller'=>'carts','action'=>'view'), array('class' => 'btn btn-sm btn-success'))?>
-</div>
- 
 <h2><?php echo __('Plugins'); ?></h2>
     
 <table class="table table-bordered">
@@ -36,18 +25,10 @@
 	<tr>
                     <th><?php echo $this->Paginator->sort('id'); ?></th>
                     <th><?php echo $this->Paginator->sort('name');?></th>
-                    <th class="actions"><?php echo __('Actions'); ?>
-                                             
-                             
-                
+                    <th class="actions"><?php echo __('Actions'); ?>                                       
                     </th>
-                    
-	</tr>
-       
-
-       
+        </tr>      
 	</thead>
-
 	<tbody>
 	<?php foreach ($plugintools as $plugintool): ?>
          	<tr>            	
@@ -61,8 +42,7 @@
                    <?php echo $this->Form->create('Cart',array('id'=>'add-form-'.$plugintool['Plugintool']['id'],'url'=>array('controller'=>'carts','action'=>'add1')));  ?>
 		<?php echo $this->Form->hidden('plugintool_id',array('value'=>$plugintool['Plugintool']['id']));?> 
 		<?php echo $this->Form->submit('Add',array('class'=>'btn-info btn btn-sm'));?> 
-		<?php echo $this->Form->end() ?>
-		
+		<?php echo $this->Form->end(); ?>  
                   
                 </div>
                        </td>

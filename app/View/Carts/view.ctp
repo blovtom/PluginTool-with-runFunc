@@ -8,8 +8,6 @@
 		</ol>
 	</div>
 </div>
-
-
 <div class="row">
 	<div class="col-lg-12">
 		<table class="table">
@@ -28,17 +26,29 @@
 			</tbody>
 		</table>
             <p >
-                         
+                     <?php echo $this->Form->create('Cart',array('url'=>array('controller'=>'carts', 'action'=>'check')));?>
+                    
+                
+                <?php if (null!= $carts){
+                    echo $this->Form->submit('Run tool',array('class'=>'btn btn-warning','div'=>false))."&nbsp";
+                }		?>
+                 
+			     <?php echo $this->Form->end();?>      
              </P>
 
 	</div>
 </div>
-             <div class = "btn-group" role = "group" aria-label="...">                
-             
- <?php if (null != $carts){
-     echo $this->Html->link(__('Run Tool'),array('controller'=>'carts','action'=>'check'), array('class' => 'btn btn-sm btn-success'));
-     echo $this->Html->link(__('Clear Plugins'),array('controller'=>'carts','action'=>'clear'), array('class' => 'btn btn-sm btn-warning'));
-  }?>                
-                    <?php if (null == $carts){
-                 echo $this->Html->link(__('Add Plugins'),array('controller'=>'Plugintools','action'=>'index'), array('class' => 'btn btn-sm btn-primary'));}?>
+             <div aign="right">
+                
+             <?php echo $this->Form->create('Cart',array('url'=>array('controller'=>'carts', 'action'=>'clear')));?>
+			<?php if (null!= $carts){ 
+                            echo $this->Form->submit('Clear Plugins',array('class'=>'btn btn-warning','div'=>false));
+                        }?>
+                    <?php echo $this->Form->end();?>
+                 
+                 <?php echo $this->Form->create('Cart',array('url'=>array('controller'=>'Plugintools', 'action'=>'index')));?>
+                 <?php if(null == $carts){
+                      echo $this->Form->submit('Add Plugins',array('class'=>'btn btn-warning','div'=>false));
+                 } ?>
+                    <?php echo $this->Form->end();?>
              </div>
